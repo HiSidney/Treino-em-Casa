@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121212;
+    --text-color: #F5F5F5;
+    --purple: #840EC9;
+    --purple_hover: #840EC9d4;
+    --card-bg: #1E1E1E;
+
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+}

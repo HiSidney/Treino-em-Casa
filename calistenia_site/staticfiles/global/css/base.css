@@ -1,0 +1,28 @@
+/* 
+font-family: "Bebas Neue", sans-serif;
+font-family: "Montserrat", sans-serif;
+font-family: "Inter", sans-serif;
+ */
+
+:root {
+    --bg-color: #121212;
+    --text-color: #F5F5F5;
+    --purple: #840EC9;
+    --purple_hover: #840EC9d4;
+    --card-bg: #1E1E1E;
+
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+}
+
+header.site-header {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+</head>
+<body>
+    <main>
+
+        <div class="div_logo">
+            <img src="{% static 'global/img/logo.png' %}" alt="Logo do Site" class="logo_site">
+        </div>
+
+        <div class="div_title">
+            <h2>Você saiu da sua conta</h2>
+            <p>Esperamos te ver em breve de novo 💪</p>
+        </div>
+
+        <div class="links_suport">
+            <a href="{% url 'login' %}">Fazer login novamente</a>
+            <br>
+            <a href="/">Voltar para a página inicial</a>
+        </div>
+
+    </main>
+</body>
+</html>

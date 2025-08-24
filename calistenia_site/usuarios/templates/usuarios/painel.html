@@ -1,0 +1,106 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'usuarios/css/painel.css' %}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="background_img_welcome">
+    <div class="welcome">
+        <div class="div_title_welcome">
+            <h1>Olá, {{ user.username }}! Pronto para mais um treino hoje?</h1>
+            <h2>Hoje é <span class="emphasis">pullday</span></h2>
+        </div>
+    
+        <div class="cards_shotcut">
+            <a href="#">
+                <div class="card">
+                    <p>Ver Progresso</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <p>Acessar Treino de Hoje</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <p>Ver Refeições do Dia</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <p>Ver Cronograma</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+</section>
+<section class="background_progress">
+    <div class="progress">
+        <h1>Progresso</h1>
+
+        <div class="backgrund_grafico-container">
+            <div class="grafico-container">
+                <canvas id="graficoPeso"></canvas>
+            </div>
+    
+            <div class="grafico-container">
+                <canvas id="graficoReps"></canvas>
+            </div>
+        </div>
+
+        <ul>
+            <h3>Marcos Alcançados</h3>
+            {% for marco in marcos %}
+                <li>{{ marco.nome }} - {{ marco.data }}</li>
+            {% empty %}
+                <li>Nenhum marco registrado ainda.</li>
+            {% endfor %}
+        </ul>
+        <button>Ver todos os dados de progresso</button>
+    </div>
+</section>
+
+<section class="background_training_plan">
+    <div class="training_plan">
+        <h1>Planilha de Treino</h1>
+    </div>
+</section>
+
+<section class="background_weekly_schedule">
+    <div class="weekly_schedule">
+        <h1>Cronograma Semanal</h1>
+    </div>
+</section>
+
+<section class="background_meal_plan">
+    <div class="meal_plan">
+        <h1>Plano Alimentar / Dieta</h1>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    console.log("Pesos (string):", '{{ pesos|escapejs }}');
+    console.log("Datas (string):", '{{ datas|escapejs }}');
+    console.log("reps (string):", '{{ reps|escapejs }}');
+    console.log("semanas (string):", '{{ semanas|escapejs }}');
+
+    // Dados vindo do Django
+    const pesos = JSON.parse('{{ pesos|escapejs }}');
+    const datas = JSON.parse('{{ datas|escapejs }}');
+    const reps = JSON.parse('{{ reps|escapejs }}');
+    const semanas = JSON.parse('{{ semanas|escapejs }}');
+</script>
+
+<script src="{% static 'usuarios/js/painel.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}

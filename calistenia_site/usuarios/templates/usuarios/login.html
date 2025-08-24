@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'usuarios/css/login.css' %}">
+
+    <title>Login</title>
+</head>
+<body>
+    <main>
+
+        <div class="div_logo">
+            <img src="{% static 'global/img/logo.png' %}" alt="Logo do Site" class="logo_site">
+        </div>
+
+        <div class="div_title">
+            <h2>Login in</h2>
+            <p>Digite seu endereço de e-mail e senha para acessar a conta.</p>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="campo">
+                <label for="email">E-mail </label>
+                <input type="text" name="email" id="id_email" placeholder="Digite seu e-mail aqui.">
+            </div>
+
+            <div class="campo">
+                <label for="password">Senha </label>
+                <input type="text" name="password" id="id_password" placeholder="Digite sua senha aqui.">
+            </div>
+
+            {% if form.errors %}
+                <div class="erros">
+                    <p>⚠️ E-mail ou senha incorretos.</p>
+                </div>
+            {% endif %}
+            
+            <div class="links_suport">
+                <a href="/usuarios/cadastro">Fazer Cadastro.</a>
+                <a href="/">Recuperar senha.</a>
+            </div>
+
+            <button type="submit">Continuar</button>
+        </form>
+    </main>
+</body>
+</html>

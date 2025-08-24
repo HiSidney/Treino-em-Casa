@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'usuarios/css/login.css' %}">
+
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+
+        <div class="div_logo">
+            <img src="{% static 'global/img/logo.png' %}" alt="Logo do Site" class="logo_site">
+        </div>
+
+        <div class="div_title">
+            <h2>Fazer Cadastro</h2>
+            <p>Digite seu endereço de e-mail, nome de usuário e sua senha para criar sua conta.</p>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="campo">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+
+            <div class="campo">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+
+            <div class="campo">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+
+            <div class="campo">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+
+            <div class="links_suport">
+                <a href="{% url 'login' %}">Já tenho conta.</a>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <!-- <form method="post">
+            {% csrf_token %}
+            
+            <div class="campo">
+                <label for="id_username">Nome de usuário</label>
+                <input type="text" name="username" id="id_username" placeholder="Digite seu nome de usuário">
+            </div>
+
+            <div class="campo">
+                <label for="id_email">E-mail</label>
+                <input type="email" name="email" id="id_email" placeholder="Digite seu e-mail">
+            </div>
+
+            <div class="campo">
+                <label for="id_password1">Senha</label>
+                <input type="password" name="password1" id="id_password1" placeholder="Digite sua senha">
+            </div>
+
+            <div class="campo">
+                <label for="id_password2">Confirme a senha</label>
+                <input type="password" name="password2" id="id_password2" placeholder="Digite sua senha novamente">
+            </div>
+            
+            
+            <button type="submit">Continuar</button>
+        </form> -->
+    </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121212;
+    --text-color: #F5F5F5;
+    --purple: #840EC9;
+    --purple_hover: #840EC9d4;
+    --card-bg: #1E1E1E;
+
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+main .logo_site {
+    width: 200px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+main h2 {
+    font-family: var(--font-title);
+    color: var(--purple);
+    font-size: 72px;
+}
+
+p, input, label, a, button {
+    font-family: var(--font-body);
+    font-size: 18px;
+}
+
+main .div_title {
+    margin-bottom: 30px;
+}
+
+main .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+main input {
+    padding: 5px;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+main a:hover {
+    transition: .3s;
+    color: var(--purple_hover);
+    text-decoration: underline;
+}
+
+main .links_suport {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main button {
+    background-color: var(--purple);
+    color: var(--text-color);
+    border: none;
+    padding: 5px 15px;
+    font-size: 24px;
+}
+
+main button:hover {
+    transition: .5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -1,0 +1,151 @@
+/* 
+font-family: "Bebas Neue", sans-serif;
+font-family: "Montserrat", sans-serif;
+font-family: "Inter", sans-serif;
+ */
+
+:root {
+    --bg-color: #121212;
+    --text-color: #F5F5F5;
+    --purple: #840EC9;
+    --purple-hover: #840EC9d4;
+    --card-bg: #1E1E1E;
+
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+}
+
+main {
+    min-height: 50vh;
+}
+
+header.site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo_site {
+    width: 200px;
+    border-radius: 20px;
+}
+
+header.site-header .nav-menu a, header.site-header .user-actions a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 16px;
+    padding: 15px 30px;
+}
+
+header.site-header .nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header.site-header .nav-menu ul li:hover {
+    transition: .5s;
+    background-color: var(--card-bg);
+}
+
+.user-actions {
+    background-color: var(--purple);
+}
+
+.user-actions:hover {
+    transition: .5s;
+    transform: scale(1.1);
+    background-color: var(--purple-hover);
+}
+
+/* footer styles*/
+
+.flex {
+    display: flex;
+}
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0px 0px 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.border {
+    border-bottom: 2px solid var(--purple);
+}
+
+footer .line-footer p i {
+    color: var(--purple);
+    font-size: 22px;
+}
+
+footer .line-footer a, footer .line-footer p {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+footer .line-footer a:hover {
+    transition: .3s;
+    color: var(--purple-hover);
+}
+
+footer .line-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+footer .line-footer p {
+    margin: 10px 0;
+}
+
+.btn-social {
+    text-align: center;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--purple);
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+    color: var(--text-color);
+}
+
+.btn-social button:hover {
+    transform: scale(1.1);
+    background-color: var(--purple-hover);
+}
+
+.copy {
+    justify-self: center;
+}
