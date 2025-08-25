@@ -70,18 +70,110 @@
 <section class="background_training_plan">
     <div class="training_plan">
         <h1>Planilha de Treino</h1>
+        <div class="flex">
+
+            
+            <div class="background_plan_of_the_day">
+                <div class="background_plan_of_the_day_top">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <p>25/08/2025 (Segunda-Feira)</p>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="background_plan_of_the_day_main">
+                    <h2>Rotina Pullday</h2>
+                    <ul>
+                        <li>Flexões tradicionais</li>
+                        <li>Flexões arqueiro</li>
+                        <li>Dips</li>
+                        <li>Pike push-ups</li>
+                        <li>Flexão isométrica (segurar em 90°)</li>
+                    </ul>
+                    <div class="background_plan_of_the_day_bottom">
+                        <button>Iniciar Treino</button>
+                        <button>Editar Plano</button>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'usuarios/img/man-pushups-removebg.png' %}" alt="man-pushups">
+        </div>
+
     </div>
 </section>
 
 <section class="background_weekly_schedule">
     <div class="weekly_schedule">
         <h1>Cronograma Semanal</h1>
+
+        <table class="cronograma">
+            <thead>
+                <tr>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+                <th>Sábado</th>
+                <th>Domingo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Push</td>
+                <td>Pull</td>
+                <td>Pernas</td>
+                <td>Descanso</td>
+                <td>Freestyle</td>
+                <td>Condicionamento</td>
+                <td>Descanso</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button>Ver Cronograma Completo</button>
+
     </div>
 </section>
 
 <section class="background_meal_plan">
     <div class="meal_plan">
         <h1>Plano Alimentar / Dieta</h1>
+        <h2>Meta diária:</h2>
+
+        <div class="cards_shotcut">
+            <a href="#">
+                <div class="card2">
+                    <p>Proteínas</p>
+                    <div class="info_card2">
+                        <p>55,00</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card2">
+                    <p>Carboidratos</p>
+                    <div class="info_card2">
+                        <p>55,00</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card2">
+                    <p>Gorduras</p>
+                    <div class="info_card2">
+                        <p>55,00</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card2">
+                    <p>Calorias</p>
+                    <div class="info_card2">
+                        <p>55,00</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <button>Abrir Plano Alimentar</button>
     </div>
 </section>
 {% endblock %}

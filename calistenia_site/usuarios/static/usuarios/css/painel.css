@@ -86,6 +86,9 @@ h2, h3, p, a, li {
     width: 500px;    /* largura desejada */
     height: 400px;   /* altura desejada */
     margin: 20px auto;
+    background-color: var(--text-color);
+    padding: 20px 40px;
+    border-radius: 20px;
 }
 .grafico-container canvas {
     width: 100% !important;
@@ -95,8 +98,6 @@ h2, h3, p, a, li {
 .backgrund_grafico-container {
     display: flex;
     flex-direction: row;
-    background-color: var(--text-color);
-    border-radius: 20px;
 }
 
 .progress ul {
@@ -108,7 +109,7 @@ h2, h3, p, a, li {
     margin-bottom: 10px;
 }
 
-.progress button {
+main button {
     border: none;
     background-color: var(--purple);
     font-size: 25px;
@@ -118,8 +119,110 @@ h2, h3, p, a, li {
     margin-top: 20px;
 }
 
-.progress button:hover {
+main button:hover {
     transition: 0.3s;
     transform: scale(1.1);
     background-color: var(--purple-hover);
 }
+
+.background_plan_of_the_day {
+    background-color: var(--text-color);
+    width: 800px;
+    /* margin: 0 auto; */
+    padding: 0 50px 50px 50px;
+    color: var(--bg-color);
+}
+
+.background_plan_of_the_day .background_plan_of_the_day_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--bg-color);
+    padding: 20px;
+    font-size: 20px;
+}
+
+.background_plan_of_the_day .background_plan_of_the_day_main {
+    margin-top: 40px;
+}
+
+.background_plan_of_the_day .background_plan_of_the_day_main ul li {
+    margin-bottom: 5px;
+}
+
+.background_plan_of_the_day .background_plan_of_the_day_bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* cronograma */
+.cronograma {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cronograma thead {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.cronograma th, .cronograma td {
+    padding: 15px;
+    border: 1px solid var(--text-color);
+}
+
+.cronograma tbody td {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.cronograma tbody td:nth-child(odd) {
+    background: #e4e4e4; /* listras alternadas */
+}
+
+/* Hover para destacar */
+.cronograma tbody td:hover {
+    background: #9e9e9e;
+    transition: background 0.3s ease;
+}
+
+/* Responsivo: rolagem horizontal em telas pequenas */
+@media (max-width: 768px) {
+  .cronograma {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+  }
+}
+
+.training_plan > .flex {
+    gap: 30px;
+}
+
+.card2 {
+    border: 1px solid #fff;
+    background-color: var(--bg-color);
+    width: 300px;
+    height: 200px;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+.card2:hover {
+    transition: .5s;
+}
+
+.card2 > .info_card2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
