@@ -15,6 +15,10 @@ font-family: "Inter", sans-serif;
     --font-body: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -79,7 +83,6 @@ header.site-header .nav-menu ul li:hover {
 
 footer {
     padding: 40px 4%;
-    box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
 footer .flex {
@@ -124,8 +127,17 @@ footer .line-footer p {
     margin: 10px 0;
 }
 
-.btn-social {
+.btn-social, .user-actions {
     text-align: center;
+}
+
+.user-actions button {
+    border: none;
+    background-color: var(--purple);
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 5px 15px;
 }
 
 .btn-social button {

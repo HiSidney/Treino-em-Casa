@@ -119,6 +119,11 @@ main button {
     margin-top: 20px;
 }
 
+main button a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 main button:hover {
     transition: 0.3s;
     transform: scale(1.1);

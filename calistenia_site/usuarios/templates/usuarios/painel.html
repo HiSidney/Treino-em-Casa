@@ -9,29 +9,30 @@
 
 {% block content %}
 <section class="background_img_welcome">
+
     <div class="welcome">
         <div class="div_title_welcome">
-            <h1>Olá, {{ user.username }}! Pronto para mais um treino hoje?</h1>
+            <h1>Olá, <span class="emphasis">{{ user.username }}</span> ! Pronto para mais um treino hoje?</h1>
             <h2>Hoje é <span class="emphasis">pullday</span></h2>
         </div>
     
         <div class="cards_shotcut">
-            <a href="#">
+            <a href="#h1_ver_progresso">
                 <div class="card">
                     <p>Ver Progresso</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="#h1_acessar_treino_de_hoje">
                 <div class="card">
                     <p>Acessar Treino de Hoje</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="#h1_ver_refeicao_do_dia">
                 <div class="card">
                     <p>Ver Refeições do Dia</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="#h1_ver_cronogramas">
                 <div class="card">
                     <p>Ver Cronograma</p>
                 </div>
@@ -43,7 +44,7 @@
 </section>
 <section class="background_progress">
     <div class="progress">
-        <h1>Progresso</h1>
+        <h1 id="h1_ver_progresso">Progresso</h1>
 
         <div class="backgrund_grafico-container">
             <div class="grafico-container">
@@ -63,13 +64,13 @@
                 <li>Nenhum marco registrado ainda.</li>
             {% endfor %}
         </ul>
-        <button>Ver todos os dados de progresso</button>
+        <button><a href="{% url 'progresso' %}">Ver todos os dados de progresso</a></button>
     </div>
 </section>
 
 <section class="background_training_plan">
     <div class="training_plan">
-        <h1>Planilha de Treino</h1>
+        <h1 id="h1_acessar_treino_de_hoje">Planilha de Treino</h1>
         <div class="flex">
 
             
@@ -102,7 +103,7 @@
 
 <section class="background_weekly_schedule">
     <div class="weekly_schedule">
-        <h1>Cronograma Semanal</h1>
+        <h1 id="h1_ver_cronogramas">Cronograma Semanal</h1>
 
         <table class="cronograma">
             <thead>
@@ -136,7 +137,7 @@
 
 <section class="background_meal_plan">
     <div class="meal_plan">
-        <h1>Plano Alimentar / Dieta</h1>
+        <h1 id="h1_ver_refeicao_do_dia">Plano Alimentar / Dieta</h1>
         <h2>Meta diária:</h2>
 
         <div class="cards_shotcut">

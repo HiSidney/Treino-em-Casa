@@ -1,0 +1,77 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'usuarios/css/progresso.css' %}">
+{% endblock %}
+
+{% block title %}Meus Progressos{% endblock %}
+
+{% block content %}
+<div class="progress-container">
+
+    <!-- Cabeçalho -->
+    <header class="progress-header">
+        <h1>Meus Progressos</h1>
+        <div class="actions">
+            <a href="{% url 'registrar_peso' %}" class="btn">+ Registrar Peso</a>
+            <a href="{% url 'registrar_progresso' %}" class="btn">+ Registrar Progresso</a>
+        </div>
+    </header>
+
+    <!-- Gráficos -->
+    <section class="charts">
+        <div class="chart-card">
+            <h2>Peso Corporal</h2>
+            <canvas id="graficoPesoDetalhado"></canvas>
+        </div>
+        <div class="chart-card">
+            <h2>Reps/Séries Semanais</h2>
+            <canvas id="graficoRepsDetalhado"></canvas>
+        </div>
+    </section>
+
+    <!-- Histórico -->
+    <section class="history">
+        <h2>Histórico de Peso</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Peso (kg)</th>
+                    <th>Diferença</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/08</td>
+                    <td>70</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>08/08</td>
+                    <td>71</td>
+                    <td>+1</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Marcos -->
+    <section class="milestones">
+        <h2>Marcos Alcançados</h2>
+        <div class="milestone-list">
+            <div class="milestone-card"><p>🏋️ Primeira barra fixa — 10/08/2025</p></div>
+            <div class="milestone-card"><p>💪 10 flexões seguidas — 22/08/2025</p></div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'usuarios/js/progresso.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+h1 {
+    font-family: var(--font-title);
+    font-size: 52px;
+    color: var(--text-color);
+}
+
+h2, h3, a, p, td {
+    font-family: var(--font-text);
+    color: var(--text-color);
+}
+
+.progress-container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* Histórico */
+.history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.history th, .history td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.history th {
+    background: #f5f5f5;
+}
